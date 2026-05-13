@@ -1,0 +1,207 @@
+/* ── Reset & Base ──────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 1rem;
+  background-color: #f5f7f2;
+  color: #1e2d1f;
+  min-height: 100vh;
+}
+
+/* ── Layout ────────────────────────────────────────── */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Plant Detail Card ─────────────────────────────── */
+.plant-detail-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.plant-detail-card h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #1e2d1f;
+}
+
+/* ── Stat Grid ─────────────────────────────────────── */
+.stat-box {
+  background: #f0f5ee;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.stat-box h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5a7a5c;
+  margin-bottom: 0.35rem;
+}
+
+.stat-box p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e2d1f;
+}
+
+/* ── Health Score Color Hints ──────────────────────── */
+.stat-box.health-good p { color: #2e7d32; }
+.stat-box.health-warn p { color: #e65100; }
+.stat-box.health-bad  p { color: #b71c1c; }
+
+/* ── Care Actions ──────────────────────────────────── */
+.care-actions {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.care-actions h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #c8d8c9;
+  background: #f9fbf8;
+  font-size: 0.95rem;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  border-color: #2e7d32;
+}
+
+/* ── Buttons ───────────────────────────────────────── */
+button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Default: water */
+button {
+  background: #2e7d32;
+  color: #ffffff;
+}
+
+button:hover:not(:disabled) {
+  background: #1b5e20;
+}
+
+/* Fertilize */
+button.btn-fertilize {
+  background: #f9a825;
+  color: #1a1a1a;
+}
+
+button.btn-fertilize:hover:not(:disabled) {
+  background: #f57f17;
+}
+
+/* Prune */
+button.btn-prune {
+  background: #558b2f;
+  color: #ffffff;
+}
+
+button.btn-prune:hover:not(:disabled) {
+  background: #33691e;
+}
+
+/* Repot */
+button.btn-repot {
+  background: #795548;
+  color: #ffffff;
+}
+
+button.btn-repot:hover:not(:disabled) {
+  background: #4e342e;
+}
+
+/* ── Care History ──────────────────────────────────── */
+.care-history {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  margin-top: 2rem;
+}
+
+.care-history h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.history-entry {
+  padding: 0.9rem 1rem;
+  border: 1px solid #e0eae0;
+  border-radius: 10px;
+  background: #f9fbf8;
+}
+
+.history-entry strong {
+  text-transform: capitalize;
+  color: #2e7d32;
+}
+
+.history-entry p {
+  font-size: 0.85rem;
+  color: #5a7a5c;
+  margin-top: 0.25rem;
+}
+
+.history-entry .history-note {
+  font-style: italic;
+  color: #1e2d1f;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* ── Error Text ────────────────────────────────────── */
+.error-msg {
+  color: #b71c1c;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
