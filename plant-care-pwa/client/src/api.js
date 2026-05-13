@@ -1,4 +1,8 @@
-const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const BASE_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:5000/api'
+    : 'https://plant-care-pwa-production.up.railway.app/api';
+
 const getToken = () => localStorage.getItem('token');
 
 const headers = () => ({
