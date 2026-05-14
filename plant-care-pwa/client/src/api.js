@@ -1,8 +1,4 @@
-const BASE_URL =
-  window.location.hostname === 'localhost'
-    ? 'http://localhost:5000/api'
-    : 'https://plant-care-pwa-production.up.railway.app/api';
-
+const BASE_URL = '/api';
 const getToken = () => localStorage.getItem('token');
 
 const headers = () => ({
