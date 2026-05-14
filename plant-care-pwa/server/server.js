@@ -18,10 +18,10 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/plants', require('./routes/plants'));
 app.use('/api/notifications', require('./routes/notifications'));
 
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/{*splat}', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 mongoose.connect(process.env.MONGO_URI)
